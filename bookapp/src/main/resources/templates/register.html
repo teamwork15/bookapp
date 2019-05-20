@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bootstrap Example</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body class="bg-info">
+<div class="container">
+<div class="row">
+<div class="col-lg-3">
+<br>
+<form action="/submit" method="post">
+<table class="table">
+<tr>
+<td>Firstname</td>
+<td><input type="text" name="firstname" placeholder="firstname">
+</tr>
+<tr>
+<td>Lastname</td>
+<td><input type="text" name="lastname" placeholder="lastname">
+</tr>
+<tr>
+<td>Male</td>
+<td><input type="radio" class="custom-contol custom-radio" name="gender" value="male"></td>
+</tr>
+<tr>
+<td>Female</td>
+<td><input type="radio" class="custom-contol custom-radio" name="gender" value="female"></td>
+</tr>
+<tr>
+<td>Java</td>
+<td><input type="radio" class="custom-contol custom-radio" name="languages" value="Java"></td>
+</tr>
+<tr>
+<td>C</td>
+<td><input type="radio" class="custom-contol custom-radio" name="languages" value="C"></td>
+</tr>
+<tr>
+<td>Python</td>
+<td><input type="radio" class="custom-contol custom-radio" name="languages" value="Python"></td>
+</tr>
+<tr>
+<td>Username</td>
+<td><input type="text" name="username" placeholder="username"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="password" placeholder="password"></td>
+</tr>
+<tr>
+<td></td>
+<td><button type="submit" class="btn btn-default">OK</button></td>
+</tr>
+
+</table>
+
+
+</form>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

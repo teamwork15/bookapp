@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bootstrap Example</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body class="bg-warning">
+<div class="container">
+<div class="row">
+<div class="col-lg-3">
+<br>
+<table class="table table-bordered table-hover">
+<tr>
+<th>TITLE</th>
+<th>AUTHOR</th>
+<th>GENRE</th>
+<th>DELETE</th>
+</tr>
+<tr th:each="book:${booklist}">
+<td th:text="${book.bookTitle}"></td>
+<td th:text=${book.bookAuthor}></td>
+<td th:text=${book.bookGenre}></td>
+<td><a th:href="@{/bookstore/deletebook(bookTitle=${book.bookTitle})}">DELETE</a></td>
+</tr>
+</table>
+<div  class="text-success">
+<h6 th:text="${message}"></h6>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

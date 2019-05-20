@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bootstrap Example</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body background="/images/photo-1507842217343-583bb7270b66.jpg">
+<div class="container">
+<div class="row">
+<div class="col-lg-3">
+<br>
+<form action="/bookstore/addbooks"  method="post" enctype="multipart/form-data">
+
+<div class="form-group">
+<label for="myTitle">Book Title</label>
+<input class="form-control" id="myTitle" placeholder="Title" type="text" name="bookTitle">
+</div>
+<div class="form-group">
+<label for="myAuthor">Book Author</label>
+<input class="form-control" id="myAuthor" placeholder="Author" type="text" name="bookAuthor">
+
+</div>
+<div class="form-group">
+<label for="myGenre">Book Genre</label>
+<input class="form-control" id="myGenre" placeholder="Genre" type="text" name="bookGenre">
+
+</div>
+<div class="form-group">
+<label for="myUpload">Upload Book</label>
+<input class="form-control" id="myUpload" name="file" type="file">
+</div>
+<button type="submit" class="btn btn-default">OK</button>
+</form>
+<div class="text-success">
+<h6 th:text="${message}"></h6>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

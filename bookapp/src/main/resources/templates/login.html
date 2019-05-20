@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bootstrap Example</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body class="bg-info">
+<div class="container">
+<div class="row">
+<div class="col-lg-3">
+<br>
+<form action="/login"  th:object="${students}" method="post">
+
+
+<div class="form-group">
+
+
+<label for="myUsername">Username</label>
+<input class="form-control" id="myUsername" placeholder="username" type="text" th:field="*{username}">
+<label style="color:red;font-style:italic" th:if="${#fields.hasErrors('username')}" th:class="'error'">Enter Username</label>
+
+<label for="myPassword">Password</label>
+<input class="form-control" id="myPassword" placeholder="Password" type="password" th:field="*{password}">
+<label style="color:red;font-style:italic" th:if="${#fields.hasErrors('Password')}" th:class="'error'">Enter Password</label>
+</div>
+<button type="submit" class="btn btn-default">OK</button>
+</form>
+<div>
+<p style="color:red" th:text="${message}"></p>
+</div>
+</div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>
